@@ -6,7 +6,7 @@ function ProtectedRoute({ children }) {
     const [isAuth, setIsAuth] = useState(null)
 
     useEffect(() => {
-        fetch("http://localhost:3000/dashboard", {
+        fetch("https://expense-tracker-eta-lyart-50.vercel.app//dashboard", {
             credentials: "include"
         })
         .then(res => {

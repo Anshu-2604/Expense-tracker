@@ -16,7 +16,7 @@ function Home(){
     async function submit(e){
         e.preventDefault()
         try{ 
-        let request=await fetch("http://localhost:3000/",{
+        let request=await fetch("https://expense-tracker-eta-lyart-50.vercel.app/",{
             method:"POST",
             credentials:"include",
             headers:{
