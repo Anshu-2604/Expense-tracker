@@ -7,7 +7,7 @@ A full-stack web application built with the MERN stack, featuring secure user au
 - 🔐 **Authentication** — Signup/Login with JWT, bcrypt password hashing, and HTTP-only cookies
 - 🛡️ **Protected Routes** — Middleware-based route protection on both frontend and backend
 - 💰 **Expense Tracker** — Add, view, and clear expenses with a live dashboard and running total
-- 🎨 **Custom UI** — Blue-black themed design with a terminal-inspired aesthetic
+- 🎨 **Custom UI** — white-black-blue themed design with a terminal-inspired aesthetic
 
 ## 🛠️ Tech Stack
 
