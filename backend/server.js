@@ -6,6 +6,7 @@ let mongoose=require("mongoose")
 let bcrypt=require("bcrypt")
 const jwt=require("jsonwebtoken")
 const cookieParser=require("cookie-parser")
+require('dotenv').config();
 
 const app = express();
 app.use(cookieParser())
@@ -17,7 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
 
-mongoose.connect("mongodb://localhost:27017/usersdata")
+mongoose.connect("process.env.MONGO_URI")
   .then(() => console.log("MongoDB connected!"))
   .catch((err) => console.log("Error:", err));
 
