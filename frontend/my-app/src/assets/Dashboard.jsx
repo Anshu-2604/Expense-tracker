@@ -13,7 +13,7 @@ function Dashboard() {
     useEffect(() => {
         async function dashboard() {
             try {
-                const response = await fetch("https://expense-tracker-eta-lyart-50.vercel.app//dashboard",{
+                const response = await fetch("https://expense-tracker-c2f4.onrender.com//dashboard",{
                     credentials:'include'
                 });
 
@@ -32,7 +32,7 @@ function Dashboard() {
     totalexpense();
 }, [expense_list]); 
     async function Logout(){
-        let response=await fetch("https://expense-tracker-eta-lyart-50.vercel.app/Logout",{
+        let response=await fetch("https://expense-tracker-c2f4.onrender.com/Logout",{
             method:"POST",
             credentials:"include"
         })
@@ -50,7 +50,7 @@ function Dashboard() {
    async function handeladdexpense(e){
     e.preventDefault() 
     try{ 
-        let expense_response=await fetch("https://expense-tracker-eta-lyart-50.vercel.app/Addexpense",{
+        let expense_response=await fetch("https://expense-tracker-c2f4.onrender.com/Addexpense",{
             method:"POST",
             credentials:"include",
             headers:{
@@ -71,7 +71,7 @@ function Dashboard() {
 
     }
     async function fetchexpense(){
-        let expenselist=await fetch("https://expense-tracker-eta-lyart-50.vercel.app/fetchexpense",{
+        let expenselist=await fetch("https://expense-tracker-c2f4.onrender.com/fetchexpense",{
             credentials:"include"
 
         })
@@ -94,7 +94,7 @@ function Dashboard() {
             console.log(total_amount)
     }
     async function handledelete(){fetchexpense
-        let response=await fetch("https://expense-tracker-eta-lyart-50.vercel.app/delete",{
+        let response=await fetch("https://expense-tracker-c2f4.onrender.com/delete",{
             credentials:'include',
             method:"DELETE"
         })

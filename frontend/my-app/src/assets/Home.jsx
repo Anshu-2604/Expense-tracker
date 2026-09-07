@@ -16,7 +16,7 @@ function Home(){
     async function submit(e){
         e.preventDefault()
         try{ 
-        let request=await fetch("https://expense-tracker-eta-lyart-50.vercel.app/",{
+        let request=await fetch("https://expense-tracker-c2f4.onrender.com/",{
             method:"POST",
             credentials:"include",
             headers:{
