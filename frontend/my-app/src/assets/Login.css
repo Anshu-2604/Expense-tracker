@@ -1,0 +1,81 @@
+.login-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+
+.login-container form {
+  margin-top: -150px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 320px;
+  padding: 32px 28px;
+  background-color:white;
+  border: 1px solid #1e3a8a;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(30, 64, 175, 0.35);
+}
+
+.login-container form input {
+  padding: 10px 12px;
+  border: 1px solid #1e3a8a;
+  border-radius: 6px;
+  background-color: white;
+  color: black;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-container form input:hover {
+  border-color: #3b82f6;
+}
+
+.login-container form input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.login-container form input::placeholder {
+  color: #94a3b8;
+}
+
+.login-container form button {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e3a8a;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.login-container form button:hover {
+  background-color: #3b82f6;
+  transform: translateY(-1px);
+}
+
+.login-container .login-new-btn {
+  margin-top: 12px;
+  padding: 8px 14px;
+  background-color: transparent;
+  color: #3b82f6;
+  border: 1px solid #1e3a8a;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.login-container .login-new-btn:hover {
+  background-color: #1e3a8a;
+  color: #ffffff;
+}
+label{
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

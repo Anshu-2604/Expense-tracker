@@ -1,0 +1,275 @@
+/* Dashboard.css */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+/* Left Sidebar */
+.Sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background-color: white;
+    border-right: 1px solid #0d6efd;
+
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 4px 0 20px rgba(0, 123, 255, 0.15);
+}
+
+/* Welcome text */
+.Sidebar h3 {
+    width: 100%;
+    text-align: center;
+
+    color:#0d6efd ;
+    font-size: 22px;
+
+    margin: 10px 0 40px;
+}
+
+.Sidebar h3::first-line {
+    color: #0d6efd;
+}
+
+/* Sidebar Buttons */
+.Sidebar button {
+    width: 100%;
+    padding: 13px 15px;
+
+    margin-bottom: 15px;
+
+    background-color: transparent;
+    color: black;
+
+    border: 1px solid #0d6efd;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+/* Button hover */
+.Sidebar button:hover {
+    background-color: #0d6efd;
+    color: white;
+
+    box-shadow: 0 0 15px rgba(13, 110, 253, 0.5);
+
+    transform: translateY(-2px);
+}
+
+/* Main Expense Area */
+.Expense-list {
+    margin-left: 250px;
+
+    min-height: 100vh;
+
+    padding: 40px;
+
+    background-color: white;
+}
+
+/* Optional heading if you add one later */
+.Expense-list h2 {
+    margin-top: 0;
+
+    color: #0d6efd;
+    font-size: 28px;
+}
+
+/* Expense card - useful when you start rendering expenses */
+.expense-card {
+    background-color: white;
+
+    border: 1px solid #1b2735;
+    border-left: 4px solid #0d6efd;
+
+    border-radius: 10px;
+
+    padding: 20px;
+    margin-bottom: 15px;
+
+    transition: all 0.25s ease;
+}
+
+.expense-card:hover {
+    border-color: #0d6efd;
+
+    box-shadow: 0 0 15px rgba(13, 110, 253, 0.2);
+
+    transform: translateX(3px);
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+
+    .Sidebar {
+        width: 190px;
+        padding: 25px 15px;
+    }
+
+    .Expense-list {
+        margin-left: 190px;
+        padding: 25px;
+    }
+
+    .Sidebar h3 {
+        font-size: 18px;
+    }
+
+    .Sidebar button {
+        font-size: 13px;
+        padding: 11px;
+    }
+}
+/* Popup background */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup box */
+.popup-box {
+    width: 350px;
+
+    background: white;
+    border: 1px solid #0d6efd;
+    border-radius: 10px;
+
+    padding: 25px;
+
+    box-shadow: 0 0 20px rgba(13, 110, 253, 0.4);
+}
+
+/* Heading */
+.popup-box h2 {
+    color: #0d6efd;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Inputs */
+.popup-box input {
+    width: 100%;
+
+    padding: 10px;
+    margin-bottom: 15px;
+
+    background: white;
+    color: black;
+
+    border: 1px solid #333;
+    border-radius: 5px;
+
+    outline: none;
+}
+
+/* Input focus */
+.popup-box input:focus {
+    border-color: #0d6efd;
+}
+
+/* Buttons */
+.popup-box button {
+    padding: 10px 15px;
+
+    margin-right: 10px;
+
+    background: #0d6efd;
+    color: white;
+
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+.popup-box button:hover {
+    background: #0b5ed7;
+}
+/* Dashboard.css mein add karo */
+
+.Expense-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d1117;
+    border: 1px solid #1f2937;
+    border-radius: 8px;
+    padding: 14px 18px;
+    color: #e5e7eb;
+    font-family: 'Courier New', monospace;
+    transition: all 0.2s ease;
+}
+
+.expense-item:hover {
+    border-color: #3b82f6;
+    background-color: #111827;
+    transform: translateX(4px);
+}
+
+.expense-item span:first-child {
+    font-weight: 500;
+    color: #93c5fd; /* light blue for item name */
+}
+
+.expense-item span:last-child {
+    font-weight: 600;
+    color: #4ade80; /* green for amount, feels like "money" */
+}
+
+/* "No expenses yet" message */
+.Expense-list p {
+    text-align: center;
+    color: #6b7280;
+    font-family: 'Courier New', monospace;
+    font-style: italic;
+    padding: 30px 0;
+    border: 1px dashed #1f2937;
+    border-radius: 8px;
+}
+form{
+    display: flexbox;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
