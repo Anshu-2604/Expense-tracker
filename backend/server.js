@@ -84,7 +84,7 @@ app.post("/Login" ,async function(req,res){
                       return res.status(401).json({message:"Wrong password"})
                 }
                 else{
-                    let token=jwt.sign({name:Username},"Himmu",{
+                    let token=jwt.sign({name:Username},"process.env.JWT_SECRET",{
                        
                     }
                     
