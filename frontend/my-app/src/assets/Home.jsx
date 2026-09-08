@@ -34,7 +34,7 @@ function Home(){
         clearinput()
     }
     catch(err){
-        console.error(err)
+        alert(err)
     }
     }
  return (
