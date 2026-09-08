@@ -74,8 +74,8 @@ catch(err){
 })
 app.post("/Login" ,async function(req,res){
     const {Username,Password}=req.body
-    const isexist=await usermodel.findOne({name:Username})
     try{
+        const isexist=await usermodel.findOne({name:Username})
         if(!isexist){
             return res.status(404).json({message:"user do not exist"})
         }
