@@ -14,7 +14,7 @@ function Dashboard() {
     useEffect(() => {
         async function dashboard() {
             try {
-                const response = await fetch("https://expense-tracker-c2f4.onrender.com//dashboard",{
+                const response = await fetch("https://expense-tracker-c2f4.onrender.com/dashboard",{
                     credentials:'include'
                 });
 
