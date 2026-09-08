@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import "./Dashboard.css";
-
+import { useNavigate } from 'react-router-dom';
 function Dashboard() {
+    const navigate = useNavigate();
     const [name, Setname] = useState("");
     const[expensename,Setexpensename]=useState("")
     const[amount,Setamount]=useState("")
@@ -40,7 +41,7 @@ function Dashboard() {
         let result=await response.json()
 
         alert(result.message)
-        window.location.reload();
+        navigate("/Login")
 
     }
     function close(){
@@ -91,7 +92,6 @@ function Dashboard() {
 
             })
             Settotal_amount(sum)
-            console.log(total_amount)
     }
     async function handledelete(){fetchexpense
         let response=await fetch("https://expense-tracker-c2f4.onrender.com/delete",{

@@ -93,7 +93,8 @@ app.post("/Login" ,async function(req,res){
                    res.cookie("token", token, {
     httpOnly: true,
     secure: true,
-    sameSite: "none"
+    sameSite: "none",
+    path:"/"
 });
                     return res.status(200).json({message:"login successfully"})
                 }
@@ -108,10 +109,18 @@ app.get("/dashboard", isprotected,function(req,res){
     const name=req.Userid
     res.json({msg:name})
 })
-app.post("/Logout",function(req,res){
-    res.clearCookie("token").json({message:"Logout sucessfully"});
-    
-})
+app.post("/Logout", function (req, res) {
+    res.clearCookie("token", {
+        httpOnly: true,
+        secure: true,
+        sameSite: "none",
+        path: "/"
+    });
+
+    res.json({
+        message: "Logout successfully"
+    });
+});
 app.post("/Addexpense",isprotected,async function(req,res){
     let user_name=req.Userid
     const{item_name,item_amount}=req.body
