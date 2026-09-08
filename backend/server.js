@@ -28,7 +28,7 @@ function isprotected(req,res,next){
       return  res.status(401).json({message:"Access token is required"})
     }
     try{ 
-    let decode=jwt.verify(token,"Himmu",{algorithms:["HS256"]})
+    let decode=jwt.verify(token,process.env.JWT_SECRET,{algorithms:["HS256"]})
     req.Userid=decode.name
     next()
     }
@@ -85,7 +85,7 @@ app.post("/Login" ,async function(req,res){
                       return res.status(401).json({message:"Wrong password"})
                 }
                 else{
-                    let token=jwt.sign({name:Username},"process.env.JWT_SECRET",{
+                    let token=jwt.sign({name:Username},process.env.JWT_SECRET,{
                        
                     }
                     
